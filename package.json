@@ -1,0 +1,41 @@
+{
+  "name": "belajar-menggunakan-unit-test-jest",
+  "version": "1.0.0",
+  "description": "belajar menggunakan unit test jest",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose" : true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "collectCoverage" : true,
+    "coverageThreshold" : {
+      "global" : {
+        "branches" : 100,
+        "functions" : 100,
+        "lines" : 100,
+        "statements" : 100
+      }
+    },
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}",
+      "!vendor/**/*.{js,jsx}"
+    ]
+  },
+  "author": "arifal hidayat salamulloh",
+  "license": "ISC",
+  "dependencies": {
+    "mustache" : "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.4.2",
+    "jest": "^29.4.2",
+    "@types/jest" : "^28.1.0",
+    "@types/mustache" : "^4.2.0"
+  }
+}
